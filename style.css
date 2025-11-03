@@ -1,0 +1,175 @@
+body {
+  position: relative;
+  background: url("image.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #f0f6fc;
+  font-family: 'Poppins', sans-serif;
+  font-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* Add a dark overlay to reduce image intensity */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* adjust opacity: 0.3–0.7 */
+  z-index: 0;
+}
+
+/* Keep the main container above the overlay */
+.container {
+  position: relative;
+  z-index: 1;
+  background: rgba(22, 27, 34, 0.6); /* subtle transparency */
+  padding: 30px;
+  border: 2px solid #00bcd4; /* ✅ Cyan-blue border */
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 188, 212, 0.9); /* glowing cyan-blue effect */
+  width: 700px;
+  text-align: center;
+}
+h1 {
+  color: #00bcd4;
+  font-size: 40px ;
+}
+
+select, textarea, button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+textarea {
+  background: #0d1117;
+  color: #f0f6fc;
+  resize: none;
+  height: 80px;
+}
+#inputText{
+    border-color: #00bcd4;
+}
+button {
+  background: #238636;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #2ea043;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Hide the default file input */
+input[type="file"] {
+  display: none;
+}
+
+/* Custom upload button */
+.custom-file-upload {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #1e1e1e;
+  border: 2px solid #00bcd4;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.custom-file-upload:hover {
+  background-color: #00bcd4;
+  color: #1e1e1e;
+  box-shadow: 0 0 10px #00bcd4;
+}
+
+/* Highlight for the main label (Algorithm) */
+label[for="algorithm"] {
+  color: #00bcd4;
+  font-weight: 600;
+  font-size: 17px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-top: 15px;
+  display: block;
+  text-align: left;
+}
+
+/* Dropdown styling — no image in background */
+.algorithm-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px; /* space between label and dropdown */
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+#algorithm {
+  width: 100%;
+  max-width: 320px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  background-color: #1e1e1e;
+  color: #ffffff;
+  border: 2px solid #00bcd4;
+  font-size: 15px;
+  font-weight: 500;
+  appearance: none;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+#algorithm:hover {
+  border-color: #00e5ff;
+  box-shadow: 0 0 8px #00e5ff;
+}
+
+#algorithm:focus {
+  border-color: #00bcd4;
+  box-shadow: 0 0 8px #00bcd4;
+}
+
+#algorithm option {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+#outputText,#inputText {
+  background: #0d1117;
+  color: #f0f6fc;
+  resize: none;
+  height: 80px;
+  border: 2px solid #00bcd4; /* ✅ Cyan-blue border */
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+#outputText:hover,
+#outputText:focus,#inputText:hover,#inputText:focus {
+  border-color: #00e5ff; /* lighter cyan */
+  box-shadow: 0 0 8px #00e5ff;
+}
